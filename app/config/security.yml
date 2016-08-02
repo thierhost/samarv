@@ -1,0 +1,41 @@
+# app/config/security.yml
+
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: sha512
+        Doctolib\UserBundle\Entity\User: sha512
+
+    role_hierarchy:
+        ROLE_PATIENT: ROLE_PATIENT
+        ROLE_MEDECIN: ROLE_MEDECIN
+        ROLE_STRUCTURE_SINITAIRE: ROLE_STRUCTURE_SINITAIRE
+        ROLE_ADMIN:       [ROLE_MEDECIN,ROLE_PATIENT,ROLE_STRUCTURE_SINITAIRE]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        main:
+            entity:
+                class: Doctolib\UserBundle\Entity\User
+                property: username
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern:  ^/
+            anonymous: true
+            provider:  main
+            form_login:
+                login_path: login
+                check_path: login_check
+            logout:
+                path: logout
+                target: /
+
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN, requires_channel: https }
+        - { path: ^/patient, roles: ROLE_PATIENT, requires_channel: https }
+        - { path: ^/medecin, roles: ROLE_MEDECIN, requires_channel: https }
+        - { path: ^/structure-sanitaire, roles: ROLE_STRUCTURE_SINITAIRE, requires_channel: https }

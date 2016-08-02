@@ -1,0 +1,19 @@
+doctolib_admin_homepage:
+    path:     /admin
+    defaults: { _controller: DoctolibAdminBundle:Default:index }
+
+doctolib_admin_add_adresse:
+    path:     /admin/adresse/add
+    defaults: { _controller: DoctolibAdminBundle:Default:index }
+
+doctolib_admin_view_adresse:
+    path:     /admin/adresse/view/{id}
+    defaults: { _controller: DoctolibAdminBundle:Default:index }
+
+doctolib_admin_edit_adresse:
+    path:     /admin/adresse/edit/{id}
+    defaults: { _controller: DoctolibAdminBundle:Default:index }
+
+doctolib_admin_remove_adresse:
+    path:     /admin/adresse/remove/{id}
+    defaults: { _controller: DoctolibAdminBundle:Default:index }

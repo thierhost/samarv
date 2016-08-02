@@ -1,0 +1,8 @@
+doctolib_admin:
+    resource: "@DoctolibAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+doctolib_user:
+    resource: "@DoctolibUserBundle/Resources/config/routing.yml"
+    prefix:   /
+

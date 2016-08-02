@@ -1,0 +1,27 @@
+#url de la connexion d'un utilisateur
+login:
+    path: /
+    defaults: { _controller: DoctolibUserBundle:Security:login }
+
+# url qui verifier l'authentification du user
+login_check:
+    path: /login_check
+
+#url de deconnexion
+logout:
+    path: /logout
+
+#url pour l'inscription d'un patient
+inscription_patient:
+    path: /inscription/patient
+    defaults: { _controller: DoctolibUserBundle:Security:inscriptionPatient}
+
+#url pour l'inscription d'un patient
+inscription_medecin:
+    path: /inscription/medecin
+    defaults: { _controller: DoctolibUserBundle:Security:inscriptionMedecin}
+
+#url pour l'inscription d'un patient
+#inscription_structure_sanitaire:
+ #   path: /inscription/structure_sanitaire
+  #  defaults:{ _controller: DoctolibUserBundle:Security:inscriptionStructureSanitaire}
