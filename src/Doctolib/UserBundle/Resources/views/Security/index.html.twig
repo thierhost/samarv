@@ -1,10 +1,68 @@
-{% if error %}
-    {# message d'erreur récupérable dans error.message #}
+{% extends "DoctolibFrontBundle::layout.html.twig" %}
+{% block body %}
+    <div class="container">
+        <br><br><br><br>
+        {% if error %}
+            {# message d'erreur récupérable dans error.message #}
 
-    {{ error.message }}
-{% endif %}
-<form action="{{ path('login_check') }}" method="POST">
-    <input type="email" name="_username" placeholder="votre email" value="{{ last_username }}">
-    <input type="password" name="_password"  placeholder="votre mot de passe">
-    <input type="submit" value="connexion">
-</form>
+            {{ error.message }}
+        {% endif %}
+        <div class="row">
+            {% for message in app.session.flashbag.get('Notice') %}
+                <div class="alert alert-dismissible alert-success">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Well done!</strong>  {{ message }}
+                    <a href="javascript:void(0)" class="alert-link"></a>.
+                </div>
+            {% endfor %}
+            <diV class="col-md-offset-3 col-md-6">
+                <div class="panel panel-info">
+                    <diV class="panel-heading">
+                        <div class="page-header">
+                            <p>
+                            <h1 class="text-center">  Authentification</h1>
+
+                            </p>
+                        </div>
+
+                    </diV>
+                    <div class="panel-body">
+                        <form class="text-center" id="form1" method="POST" action="{{ path('login_check') }}">
+
+                            <label for="text">Email</label>
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-6">
+                                    <input type="email" name="_username" value="{{ last_username }}" class="form-control" tabindex="1" required placeholder="email" autofocus> <br/>
+                                </div>
+                            </div>
+
+                            <label for="text">Mot de passe</label>
+                            <div class="row">
+
+                                <div class="col-md-offset-3 col-md-6">
+                                    <input type="password" name="_password"  class="form-control" tabindex="2" required placeholder="Mot de passe" > <br/>
+
+                                </div>
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+                    <div class="panel-footer">
+                        <button type="submit" class="btn btn-success" name="connexion"  form="form1">Connexion</button>
+                        <button type="reset" class="btn btn-warning  pull-right"  form="form1">Annuler</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+{% endblock %}

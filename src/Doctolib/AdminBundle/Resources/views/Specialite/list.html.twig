@@ -1,0 +1,45 @@
+{% extends "DoctolibAdminBundle::layout.html.twig" %}
+{% block body %}
+    <div class="container">
+    <div class="page-header">
+        <h1>Ajouter une Specialité    <a href="{{ path("doctolib_admin_add_specialite") }}" class=" btn btn-success"><span class="glyphicon glyphicon-plus"></span>&nbsp; Ajouter</a> </h1>
+    </div>
+    <div class="row">
+    {% for message in app.session.flashbag.get('info') %}
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Well done!</strong>  {{ message }}
+            <a href="javascript:void(0)" class="alert-link"></a>.
+        </div>
+    {% endfor %}
+    {% if specialites is defined    %}
+        <div class="col-md-10">
+            <div class="table-responsive">
+                <table class="table  table-bordered table-striped " id="mytable">
+                    <thead>
+                    <tr class="active">
+                        <th>Nom</th>
+                        <th>Action</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {%  for specialite in specialites %}
+                        <tr>
+                            <td>{{ specialite.nom }} </td>
+                            <td>
+                                <a href="{{ path('doctolib_admin_edit_specialite',{"id":specialite.id}) }}"> <span class="glyphicon glyphicon-pencil "></span>&nbsp;Modifier</a> &nbsp;&nbsp;
+                                <a href="{{ path('doctolib_admin_remove_specialite',{"id":specialite.id}) }}"> <span class="glyphicon glyphicon-trash "></span>&nbsp;Supprimer</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+        </div>
+    {% else %}
+        <h1>Aucune Specialité encore</h1>
+    {% endif %}
+{% endblock %}

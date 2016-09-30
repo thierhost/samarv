@@ -1,0 +1,89 @@
+{% extends "DoctolibFrontBundle::layout.html.twig" %}
+{% block body %}
+    <div class="container-fluid dark-bg ">
+        <div class="row">
+            <div class="page-header text-info text-center">
+                <h1>BESOIN D'UN PROFESSIONNEL DE SANTÉ ?</h1>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading text-center">
+                        <h4>Inscription Patient</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form action="{{ path('doctolib_front_patient_inscription') }}" method="post" id="form1">
+                            <div class="form-group">
+                                <label for="inputText" class="col-md-2 control-label">Prenom</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="prenom" autofocus id="inputText" placeholder="Prenom">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputText" class="col-md-2 control-label">Nom</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="nom" id="inputText" placeholder="Nom">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputText" class="col-md-2 control-label">Sexe</label>
+                                <div class="col-md-10">
+                                    
+                                    <select class="form-control"  placeholder="Sexe" name="sexe">
+                                        <option value="Homme">Homme</option>
+                                        <option value="Femme">Femme</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-md-2 control-label">Email</label>
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="inputEmail"  name="_username" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-md-2 control-label">Mot de passe</label>
+                                <div class="col-md-10">
+                                    <input type="password" class="form-control" name="_password"id="inputPassword" placeholder="Mot de passe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-md-2 control-label">N° Téléphone</label>
+                                <div class="col-md-10">
+                                    <input type="number" class="form-control" name="numtel" id="inputPassword" placeholder="Numéro de téléphone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-md-2 control-label">Adresse</label>
+                                <div class="col-md-10">
+                                    <input type="TEXT" class="form-control" name="adresse" id="inputPassword" placeholder="Adresse">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-3">
+                                <button class="btn btn-success btn-lg" form="form1"> Valider</button>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="reset" class=" btn btn-danger btn-lg" form="form1" value="Annuler">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4>Pas encore de compte ?</h4>
+                    </div>
+                    <div class="panel-body img-responsive">
+                        <img src="{{asset("public/img/doc.jpg") }}" alt=""><br><br>
+                        <a href="" >Je suis un professionnel de santé alors je m'inscris <i class="material-icons">tag_faces</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

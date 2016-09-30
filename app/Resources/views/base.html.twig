@@ -7,65 +7,64 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="author" content="MisterThier"/>
         <meta name="contactstate" content="SENEGAl"/>
-        <title>{% block title %}Sama rv{% endblock %}</title>
+        <title>{% block title %}Sama-rv{% endblock %}</title>
         {% block stylesheets %}
+            <!-- Material Design fonts -->
+            <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+            <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
             <link rel="stylesheet" type="text/css" href=" {{asset('public/css/bootstrap.min.css') }}">
             <link rel="stylesheet" type="text/css" href=" {{asset('public/css/bootstrap-material-design.min.css') }}">
             <link rel="stylesheet" type="text/css" href=" {{asset('public/css/ripples.min.css') }}">
-            <link rel="stylesheet" type="text/css" href=" {{asset('public/css/material-kit.css') }}">
+            <link rel="stylesheet" type="text/css" href=" {{asset('public/css/jquery-ui.min.css') }}">
+            <link rel="stylesheet" type="text/css" href=" {{asset('public/js/fullcalendar/dist/fullcalendar.min.css') }}">
+            <link rel="stylesheet" type="text/css" href=" {{asset('public/js/fullcalendar/dist/fullcalendar.print.css') }}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <style>
+            body{
+                padding-top: 60px;
+            }
             .parallax-window {
-                min-height: 600px;
-                min-width: auto;
+                min-height: 400px;
                 background: transparent;
             }
-            .parallax-bg{
-                background-repeat:no-repeat;
-                background-size:cover;
-                background-attachment:fixed;
+            .parallax-window2{
+                min-height: 200px;
+                background: transparent;
             }
-            .overlay-dark:before{
-                display: block;
-                position: absolute;
-                content: '';
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background: #1F2A36;
-                opacity:.5;
-                z-index:-1;
-            }
-            .overlay-color{
-                position: relative;
-                z-index: 1;
+            .white-bg{
+                background:#fff;
             }
 
-            .overlay-color:before{
-                display: block;
-                position: absolute;
-                content: '';
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background: #DF451A;
-                opacity:.9;
-                z-index:-1;
+            .gray-bg{
+                background:#f1f2f5;
+            }
+
+            .color-bg{
+                background:#1a1a1a;
+            }
+            .dark-bg{
+                background:#4E5961;
+            }
+            #calendar {
+                max-width: 900px;
+                margin: 0 auto;
             }
 
         </style>
     </head>
     <body>
+        {% block menu %}{% endblock %}
+
         {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="{{asset('public/js/jquery.min.js') }}"></script>
+            <script src="{{asset('public/js/moment.min.js') }}"></script>
             <script src="{{asset('public/js/bootstrap.min.js') }}"></script>
             <script src="{{asset('public/js/material.min.js') }}"></script>
             <script src="{{asset('public/js/ripples.min.js') }}"></script>
             <script src="{{asset('public/js/parallax.min.js') }}"></script>
+            <script src=" {{asset('public/js/fullcalendar/dist/fullcalendar.min.js') }}"></script>
         {% endblock %}
     </body>
 </html>

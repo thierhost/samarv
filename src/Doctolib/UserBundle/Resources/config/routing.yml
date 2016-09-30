@@ -1,6 +1,6 @@
 #url de la connexion d'un utilisateur
 login:
-    path: /
+    path: /login
     defaults: { _controller: DoctolibUserBundle:Security:login }
 
 # url qui verifier l'authentification du user

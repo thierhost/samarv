@@ -1,0 +1,4 @@
+services:
+#    doctolib_patient.example:
+#        class: Doctolib\PatientBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

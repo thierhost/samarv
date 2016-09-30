@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+{% block menu %}
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('medecin_homepage') }}">Sama-rv</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{{ path('medecin_homepage') }}">Accueil</a></li>
+                    <li><a href="javascript:void(0)">Mes rendez-vous</a></li>
+                    <li><a href="javascript:void(0)">Mon planning</a></li>
+                    <li><a href="{{ path('medecin_parametre') }}">Mes Paramètres</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">{{ app.user.prenom }} - {{ app.user.nom }}
+                            <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path("logout") }}">Deconnexion</a></li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "DoctolibPatientBundle::layout.html.twig" %}
+{% block body %}
+    {% block jumbotron %}
+
+        <div class="container-fluid  dark-bg ">
+            <div class="row">
+                <div class="page-header text-center text-info lead">
+                    <h1>Prendre RDV avec un médecin n'a jamais été aussi simple ! <small class="text-danger">Gratuit en plus !!!</small></h1>
+                </div>
+                <br><br><br><br><br>
+                <div class="col-md-12">
+                    <div class="well">
+                        <form action="" method="post">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label" for="addon2">Médecin ou clinique</label>
+                                        <div class="input-group">
+                                            <input type="text"  class="form-control" required autofocus>
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-fab btn-fab-mini">
+                                                     OU
+                                                 </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Spécialité</label>
+                                        <div class="input-group">
+                                            <select id="select111" class="col-md-12 form-control">
+                                                <option>totoototo</option>
+                                                <option>totootoot</option>
+                                                <option>ttttttttt</option>
+                                                <option>tttttttttt</option>
+                                                <option>tttttttttt</option>
+                                            </select>
+                                            <span class="input-group-btn"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label" for="addon2">Où</label>
+                                        <div class="input-group">
+                                            <input type="text"  class="form-control">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-fab btn-fab-mini">
+                                                     <i class="material-icons">place</i>
+                                                 </button>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <div class="input-group">
+                                            <input type="submit"  class="form-control btn btn-success" value="Rechercher">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock  %}
+{% endblock %}

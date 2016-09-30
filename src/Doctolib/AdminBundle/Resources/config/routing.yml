@@ -1,19 +1,35 @@
 doctolib_admin_homepage:
     path:     /admin
-    defaults: { _controller: DoctolibAdminBundle:Default:index }
+    defaults: { _controller: DoctolibAdminBundle:Admin:index }
 
-doctolib_admin_add_adresse:
-    path:     /admin/adresse/add
-    defaults: { _controller: DoctolibAdminBundle:Default:index }
+doctolib_admin_add_ville:
+    path:     /admin/ville/add
+    defaults: { _controller: DoctolibAdminBundle:Ville:add }
 
-doctolib_admin_view_adresse:
-    path:     /admin/adresse/view/{id}
-    defaults: { _controller: DoctolibAdminBundle:Default:index }
+doctolib_admin_list_ville:
+    path:     /admin/ville
+    defaults: { _controller: DoctolibAdminBundle:Ville:list }
 
-doctolib_admin_edit_adresse:
-    path:     /admin/adresse/edit/{id}
-    defaults: { _controller: DoctolibAdminBundle:Default:index }
+doctolib_admin_edit_ville:
+    path:     /admin/ville/edit/{id}
+    defaults: { _controller: DoctolibAdminBundle:Ville:edit }
 
-doctolib_admin_remove_adresse:
-    path:     /admin/adresse/remove/{id}
-    defaults: { _controller: DoctolibAdminBundle:Default:index }
+doctolib_admin_remove_ville:
+    path:     /admin/ville/remove/{id}
+    defaults: { _controller: DoctolibAdminBundle:Ville:remove }
+########################### gestion des Specialités #################################""
+doctolib_admin_add_specialite:
+    path:     /admin/specialite/add
+    defaults: { _controller: DoctolibAdminBundle:Specialite:add }
+
+doctolib_admin_list_specialite:
+    path:     /admin/specialite
+    defaults: { _controller: DoctolibAdminBundle:Specialite:list }
+
+doctolib_admin_edit_specialite:
+    path:     /admin/specialite/edit/{id}
+    defaults: { _controller: DoctolibAdminBundle:Specialite:edit }
+
+doctolib_admin_remove_specialite:
+    path:     /admin/specialite/remove/{id}
+    defaults: { _controller: DoctolibAdminBundle:Specialite:remove }

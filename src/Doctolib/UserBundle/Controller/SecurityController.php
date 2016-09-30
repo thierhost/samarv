@@ -27,10 +27,14 @@ class SecurityController extends Controller
         }
         else{
 
-            if($user->getRoles() == array('ROLE_PATIENT'))
-                return new Response("pateint connecté");
-            elseif($user->getRoles() == array('ROLE_MEDECIN'))
-                return new Response("medecin");
+            if($user->getRoles() == array('ROLE_PATIENT')){
+                $url = $this->generateUrl('patient_homepage');
+                return $this->redirect($url,301);
+            }
+            elseif($user->getRoles() == array('ROLE_ADMIN')){
+                return $this->redirect($this->generateUrl('doctolib_admin_homepage',301));
+            }
+              //  return new Response("medecin");
             /*
             elseif($user->getRoles() == array('ROLE_MODERATEUR'))
                 return $this->redirectToRoute('map_moderateur');*/

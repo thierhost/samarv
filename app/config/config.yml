@@ -4,6 +4,9 @@ imports:
     - { resource: services.yml }
     - { resource: "@DoctolibUserBundle/Resources/config/services.yml" }
     - { resource: "@DoctolibAdminBundle/Resources/config/services.yml" }
+    - { resource: "@DoctolibFrontBundle/Resources/config/services.yml" }
+    - { resource: "@DoctolibPatientBundle/Resources/config/services.yml" }
+    - { resource: "@DoctolibMedecinBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration

@@ -1,0 +1,18 @@
+medecin_homepage:
+    path: /medecin
+    defaults: { _controller: DoctolibMedecinBundle:Medecin:index}
+
+medecin_parametre:
+    path: /medecin/parametre
+    defaults: { _controller: DoctolibMedecinBundle:Medecin:parametre}
+
+medecin_profile_edit:
+    path: /medecin/edit
+    defaults: { _controller: DoctolibMedecinBundle:Medecin:edit}
+
+medecin_bio_edit:
+    path: /medecin/bio/edit
+    defaults: { _controller: DoctolibMedecinBundle:Medecin:bioEdit}
+medecin_cv_edit:
+    path: /medecin/cv/edit
+    defaults: { _controller: DoctolibMedecinBundle:Medecin:cvEdit}

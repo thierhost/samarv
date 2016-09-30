@@ -1,0 +1,126 @@
+{% extends "DoctolibFrontBundle::layout.html.twig" %}
+{% block body %}
+    {% block jumbotron %}
+
+        <div class="container-fluid  parallax-window " data-parallax="scroll" data-image-src="{{ asset('public/img/paralax.jpg') }}" >
+            <div class="row">
+                <div class="page-header text-center text-info lead">
+                    <h1>Prendre RDV avec un médecin n'a jamais été aussi simple ! <small class="text-danger">Gratuit en plus !!!</small></h1>
+                </div>
+                <br><br><br><br><br>
+                <div class="col-md-12">
+                    <div class="well">
+                        <form action="" method="post">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label" for="addon2">Médecin ou clinique</label>
+                                        <div class="input-group">
+                                            <input type="text"  class="form-control" required autofocus>
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-fab btn-fab-mini">
+                                                     OU
+                                                 </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Spécialité</label>
+                                        <div class="input-group">
+                                            <select id="select111" class="col-md-12 form-control">
+                                                <option>totoototo</option>
+                                                <option>totootoot</option>
+                                                <option>ttttttttt</option>
+                                                <option>tttttttttt</option>
+                                                <option>tttttttttt</option>
+                                            </select>
+                                               <span class="input-group-btn"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label" for="addon2">Où</label>
+                                        <div class="input-group">
+                                            <input type="text"  class="form-control">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-fab btn-fab-mini">
+                                                     <i class="material-icons">place</i>
+                                                 </button>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <div class="input-group">
+                                            <input type="submit"  class="form-control btn btn-success" value="Rechercher">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock  %}
+    {% block infos %}
+        <div class="container-fluid dark-bg parallax-window2 ">
+            <div class="page-header text-center text-info">
+                <h1>Comment ça fonctionne ?</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4> Rechercher un médecin &nbsp; <span class="glyphicon glyphicon-search"></span> </h4>
+                            </div>
+                            <div class="panel-body">
+                                <label>
+                                    <input type="checkbox" checked disabled> <span> 24h/24, 7j/7</span><br>
+                                    <input type="checkbox" checked disabled> <span> Près de chez vous</span><br>
+                                    <input type="checkbox" checked disabled> <span> 100% gratuit</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h4> Prenez rendez-vous &nbsp; <span class="glyphicon glyphicon-calendar"></span> </h4>
+                            </div>
+                            <div class="panel-body">
+                                <label>
+                                    <input type="checkbox" checked disabled> <span> En moins de 3 clics</span><br>
+                                    <input type="checkbox" checked disabled> <span> Quand vous voulez (Date & Heure)</span><br>
+                                    <input type="checkbox" checked disabled> <span> Avec qui vous voulez</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4> Consultation Confirmée &nbsp; <span class="glyphicon glyphicon-ok"></span> </h4>
+                            </div>
+                            <div class="panel-body">
+                                <input type="checkbox" checked disabled> <span> Rendez-vous confirmé</span><br>
+                                <input type="checkbox" checked disabled> <span> Email de confirmation</span><br>
+                                <input type="checkbox" checked disabled> <span> Rappel 24h avant par SMS et par Email</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}

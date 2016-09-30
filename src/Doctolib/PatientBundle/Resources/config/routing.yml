@@ -1,0 +1,3 @@
+patient_homepage:
+    path: /patient
+    defaults: { _controller: DoctolibPatientBundle:Patient:index}

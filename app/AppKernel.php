@@ -17,6 +17,9 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Doctolib\UserBundle\DoctolibUserBundle(),
             new Doctolib\AdminBundle\DoctolibAdminBundle(),
+            new Doctolib\FrontBundle\DoctolibFrontBundle(),
+            new Doctolib\PatientBundle\DoctolibPatientBundle(),
+            new Doctolib\MedecinBundle\DoctolibMedecinBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

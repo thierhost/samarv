@@ -1,0 +1,12 @@
+doctolib_front_homepage:
+    path:     /
+    defaults: { _controller: DoctolibFrontBundle:Front:index }
+doctolib_front_patient_inscription:
+    path:     /inscription/patient
+    defaults: { _controller: DoctolibFrontBundle:Front:inscriptionPatient }
+doctolib_front_medecin_inscription:
+    path:     /inscription/medecin
+    defaults: { _controller: DoctolibFrontBundle:Front:inscriptionMedecin }
+doctolib_front_admin_inscription:
+    path:     /inscription/admin
+    defaults: { _controller: DoctolibFrontBundle:Front:inscriptionAdmin }

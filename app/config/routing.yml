@@ -1,3 +1,15 @@
+doctolib_medecin:
+    resource: "@DoctolibMedecinBundle/Resources/config/routing.yml"
+    prefix:   /
+
+doctolib_patient:
+    resource: "@DoctolibPatientBundle/Resources/config/routing.yml"
+    prefix:   /
+
+doctolib_front:
+    resource: "@DoctolibFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
 doctolib_admin:
     resource: "@DoctolibAdminBundle/Resources/config/routing.yml"
     prefix:   /

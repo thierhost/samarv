@@ -1,0 +1,58 @@
+{% extends "DoctolibMedecinBundle::layout.html.twig" %}
+{% block body %}
+    <div class="container-fluid">
+        <br/>
+        <div class="row">
+            {% for message in app.session.flashbag.get('Notice') %}
+                <div class="alert alert-dismissible alert-success">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Well done!</strong>  {{ message }}
+                    <a href="javascript:void(0)" class="alert-link"></a>.
+                </div>
+            {% endfor %}
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading text-center text-uppercase">
+                        <h3> Mon Profile </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="img-responsive">
+                            <img src="" alt="">
+                        </div><br>
+                        <ul>
+                            <li> Prenom = {{ app.session.get('medecin').user.prenom }}</li>
+                            <li> Nom =    {{ app.session.get('medecin').user.nom }}</li>
+                            <li> Adresse =  {{ app.session.get('medecin').user.adresse }}</li>
+                            <li> N° Tel =  {{ app.session.get('medecin').user.numTel }}</li>
+                            <li> Spécialité = {{ app.session.get('specialite')}} </li>
+                        </ul>
+                        <hr>
+                        <p>
+                            <h3 class="text-primary text-capitalize">Ma bio</h3>
+                            <blockquote>{{ app.session.get('medecin').bio |raw}}</blockquote>
+                        </p>
+                        <hr>
+                        <p>
+                        <h3 class="text-primary text-capitalize">Mon CV</h3>
+                        <blockquote>{{ app.session.get('medecin').cv |raw}}</blockquote>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <h3>Editer mon profile</h3>
+                    </div>
+                    <div class="panel-body">
+                        <a href="{{ path('medecin_profile_edit') }}" class="btn btn-success"> Editer Profile</a>
+                        <a href="{{ path('medecin_cv_edit') }}" class="btn btn-success"> Editer son cv</a>
+                        <a href="{{ path('medecin_bio_edit') }}" class="btn btn-success"> Editer sa bio</a>
+                        <a href="" class="btn btn-success"> Ajouter une photo de profile</a>
+                        <a href="" class="btn btn-success"> Supprimer son compte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

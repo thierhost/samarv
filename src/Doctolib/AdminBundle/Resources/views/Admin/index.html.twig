@@ -1,0 +1,41 @@
+{% extends "DoctolibAdminBundle::layout.html.twig" %}
+{% block body %}
+    <div class="container-fluid">
+        <br><br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="" class="text-center"> <h1>Gestion des Villes</h1></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="{{ path("doctolib_admin_list_specialite") }}" class="text-center"> <h1>Gestion des Spécialités</h1></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="" class="text-center"> <h1>Gestions des Utilisateurs</h1></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="" class="text-center"> <h1>Gestion des contrats</h1></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
